@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".products.ProductActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <ImageView
+            android:id="@+id/background"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:background="#029AE4"/>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#CED0DB"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout
+                android:layout_width="match_parent"
+                android:layout_height="110dp"
+                >
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/product_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:title="DKExpress"
+                    app:menu="@menu/top_app_bar"
+                    app:titleTextColor="@android:color/white"
+                    app:navigationIcon="@drawable/ic_baseline_menu_24"
+                    android:theme="@style/ToolbarColoredBackArrow">
+
+                </androidx.appcompat.widget.Toolbar>
+                <androidx.appcompat.widget.SearchView
+                    android:id="@+id/product_search_view"
+                    android:layout_width="match_parent"
+                    android:background="@drawable/border"
+                    android:layout_height="40dp"
+                    app:searchIcon="@drawable/ic_search_24dp"
+                    android:layout_marginLeft="30dp"
+                    android:layout_marginRight="30dp"/>
+            </com.google.android.material.appbar.AppBarLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:reverseLayout="true"
+                android:clickable="true"
+                android:background="@color/whiteCardColor"
+                android:id="@+id/brands_name"/>
+
+
+
+
+            <RelativeLayout
+                android:layout_marginTop="10dp"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <GridView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="56dp"
+                    android:scrollbars="vertical"
+                    android:horizontalSpacing="6dp"
+                    android:verticalSpacing="10dp"
+                    android:id="@+id/products_recycle"
+                    android:numColumns="2"/>
+
+
+                <LinearLayout
+                    android:id="@+id/product_place_order_line"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:layout_gravity="bottom"
+                    android:layout_alignBottom="@+id/bottomnav"
+                    android:weightSum="3"
+                    android:layout_marginBottom="56dp"
+                    android:background="@android:color/white"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_weight="1"
+                        android:id="@+id/product_total"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Total: ₹567"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:textSize="14dp"
+                        android:background="@drawable/total_price"
+                        android:textColor="#8E24AA"/>
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/product_cancel_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/cancel_button"
+                        android:text="Cancel"/>
+                    <Button
+                        android:layout_weight="1"
+                        android:id="@+id/product_place_order"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:background="@drawable/order_track"
+                        android:textSize="12dp"
+                        android:text="Place Order"/>
+
+
+                </LinearLayout>
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="56dp"
+                    app:menu="@menu/bottom_menu"
+                    android:id="@+id/bottomnav"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    app:labelVisibilityMode="labeled"
+                    android:background="@android:color/white"
+                     />
+
+
+
+
+            </RelativeLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@android:color/white"
+
+        android:layout_gravity="start">
+        <RelativeLayout
+            android:background="@color/colorPrimary"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:paddingLeft="15dp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+
+                android:id="@+id/nav_header_imageView"
+                android:layout_marginTop="20dp"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+
+                android:elevation="20dp" />
+
+            <TextView
+                android:id="@+id/nav_header_textView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="6dp"
+                android:layout_below="@+id/nav_header_imageView"
+                android:text="Kamaran Ahmed"
+                android:paddingBottom="10dp"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:clickable="true"
+            android:id="@+id/brands"/>
+    </LinearLayout>
+</androidx.drawerlayout.widget.DrawerLayout>

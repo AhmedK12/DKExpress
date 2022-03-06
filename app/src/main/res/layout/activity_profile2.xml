@@ -1,0 +1,523 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/profile_gredient"
+    android:orientation="vertical"
+    tools:context=".grocery.Profile">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/app_bar"
+        android:layout_height="40dp"
+        android:background="#17A91D">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:background="#17A91D"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/product_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="DKExpress"
+                app:titleTextColor="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <include
+        android:visibility="gone"
+        layout="@layout/newuserdata"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/user_data"/>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/aboutusl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/Title"
+            android:text="About Us"
+            android:textSize="@dimen/primary_text_size"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/secondary"
+            android:minLines="1"
+            android:text="DKexpress is Siwan’s first online food and grocery store. With over 1000s of products and over 100s brands in our catalogue, you will find everything you are looking for. Right from fresh Fruits and Vegetables, Rice and Dals, Spices, and Seasonings to Packaged products, Beverages, Personal care products, Meats – we have it all.
+            Choose from a wide range of options in every category, exclusively handpicked to help you find the best quality available at the lowest prices. Select a time slot for delivery and your order will be delivered right to your doorstep without delivery carge. You can pay online using your debit/credit card or UPI GooglePay/PhonePay or by cash on delivery.
+            We guarantee on-time delivery and the best quality!"
+            android:textSize="12dp"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/privacy_policyl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PRIVACY POLOCY"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#D7DBDF"
+            android:minLines="1"
+            android:text="SECTION 1 – WHAT DO WE DO WITH YOUR INFORMATION?"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textColor="#D7DBDF"
+            android:text="When you purchase something from our store, as part of the buying and selling process, we collect the personal information you give us such as your name, address, and email address.\n\n
+
+When you browse our store, we also automatically receive your computer’s internet protocol (IP) address in order to provide us with information that helps us learn about your browser and operating system.\n\n
+
+Email marketing (if applicable): With your permission, we may send you emails about our store, new products, and other updates."
+            android:textSize="12dp"/>
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textColor="#D7DBDF"
+            android:text="SECTION 2 – CONSENT"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textColor="#D7DBDF"
+            android:text="How do you get my consent?
+
+When you provide us with personal information to complete a transaction, verify your credit card, place an order, arrange for a delivery or return a purchase, we imply that you consent to our collecting it and using it for that specific reason only.\n\n
+
+If we ask for your personal information for a secondary reason, like marketing, we will either ask you directly for your expressed consent or provide you with an opportunity to say no.\n\n
+
+How do I withdraw my consent?\n\n
+
+If after you opt-in, you change your mind, you may withdraw your consent for us to contact you, for the continued collection, use or disclosure of your information, at any time, by contacting us at contact@grocerytown.in or mailing us at Shidhwal more, Siwan, Bihar 841245\n\n
+
+"
+            android:textSize="12dp"/>
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textColor="#D7DBDF"
+            android:text="SECTION 3 – DISCLOSURE"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textColor="#D7DBDF"
+            android:text="We may disclose your personal information if we are required by law to do so or if you violate our Terms of Service."
+            android:textSize="12dp"/>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/refund_policyl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Returns"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minLines="1"
+            android:textColor="#D7DBDF"
+            android:text="Our policy lasts 24 hours. If 24 hours have gone by since your purchase, unfortunately, we can’t offer you a refund or exchange.\n\nTo be eligible for a return, your item must be unused and in the same condition that you received it. It must also be in the original packaging.\n\nSeveral types of goods are exempt from being returned. Perishable goods such as food, flowers, newspapers or magazines cannot be returned. We also do not accept products that are intimate or sanitary goods, hazardous materials, or flammable liquids or gases.\n\nAdditional non-returnable items:\n\nGift cards\n\nDownloadable software products\n\nSome health and personal care items\n\nTo complete your return, we require a receipt or proof of purchase.
+
+Please do not send your purchase back to the manufacturer.
+
+There are certain situations where only partial refunds are granted: (if applicable)"
+            android:textSize="15dp"/>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Refunds"
+            android:textSize="20dp"/>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#D7DBDF"
+            android:textSize="12dp"
+            android:text="Refunds (if applicable)
+
+Once your return is received and inspected, we will send you an email to notify you that we have received your returned item. We will also notify you of the approval or rejection of your refund.\n\n
+
+If you are approved, then your refund will be processed, and a credit will automatically be applied to your credit card or original method of payment, within a certain amount of days.\n\n
+
+Late or missing refunds (if applicable)\n\n
+
+If you haven’t received a refund yet, first check your bank account again.\n\n
+
+Then contact your credit card company, it may take some time before your refund is officially posted.\n\n
+
+Next contact your bank. There is often some processing time before a refund is posted.\n\n
+
+If you’ve done all of this and you still have not received your refund yet, please contact us at contact@grocerytown.in.\n\n
+
+Sale items (if applicable)\n\n
+
+Only regular priced items may be refunded, unfortunately sale items cannot be refunded.\n\n
+
+Exchanges (if applicable)"/>
+
+
+    </LinearLayout>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:id="@+id/wholerelative"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:visibility="gone"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="35dp"
+                        android:textColor="#000000"
+                        android:textStyle="bold"
+                        android:text="USER AREA"/>
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/myprofile"
+                            android:textColor="#D7DBDF"
+                            android:clickable="true"
+                            android:textSize="20dp"
+                            android:text="My Profile"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/myprofile"
+                            android:clickable="true"
+                            android:id="@+id/myorders"
+                            android:textColor="#D7DBDF"
+                            android:textSize="20dp"
+                            android:text="My Orders"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:layout_below="@+id/myorders"
+                            android:id="@+id/mywallet"
+                            android:textColor="#D7DBDF"
+                            android:textSize="20dp"
+                            android:text="My Wallet"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:layout_below="@+id/mywallet"
+                            android:id="@+id/Login"
+                            android:textColor="#D7DBDF"
+                            android:textSize="20dp"
+                            android:text="Logout"/>
+
+                    </RelativeLayout>
+
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="INFORMATION"
+                        android:visibility="gone"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dp"
+                        android:textSize="@dimen/secondry_text_size"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/aboutus"
+                            android:textColor="#123"
+                            android:clickable="true"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="About Us"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/aboutus"
+                            android:clickable="true"
+                            android:id="@+id/privacy_policy"
+                            android:textColor="#123"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="Privacy Policy"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:layout_below="@+id/privacy_policy"
+                            android:id="@+id/refund"
+                            android:textColor="#123"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="Refund Policy"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:layout_below="@+id/refund"
+                            android:id="@+id/termsofuse"
+                            android:textColor="#123"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="Terms of Use"/>
+
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="GUIDE &amp; HELP"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dp"
+                        android:textStyle="bold">
+
+                    </TextView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginLeft="40dp"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/faqs"
+                            android:textColor="#123"
+                            android:clickable="true"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="FAQs"/>
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:layout_below="@+id/faqs"
+                            android:clickable="true"
+                            android:id="@+id/blog"
+                            android:textColor="#123"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="Blog"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:layout_below="@+id/blog"
+                            android:id="@+id/service"
+                            android:textColor="#123"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="Service"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="5dp"
+                            android:clickable="true"
+                            android:layout_below="@+id/service"
+                            android:id="@+id/cantacts"
+                            android:textColor="#123"
+                            android:textSize="@dimen/primary_text_size"
+                            android:text="Contact Us"/>
+
+                    </RelativeLayout>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="CONTACT INFO"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginBottom="2dp"
+                        android:textColor="#000000"
+                        android:layout_marginLeft="35dp"
+                        android:textStyle="bold"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginTop="10dp"
+                        android:orientation="vertical">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal"
+                            android:gravity="center_horizontal"
+                            android:orientation="horizontal"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/fui_ic_phone_white_24dp"/>
+                            <TextView
+                                android:id="@+id/phone1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="#D7DBDF"
+                                android:textSize="19dp"
+                                android:text="+917295078143"/>
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            tools:ignore="UseCompoundDrawables">
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/ic_baseline_email_24"/>
+                            <TextView
+                                android:id="@+id/email1"
+                                android:layout_marginLeft="5dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:gravity="center_vertical"
+                                android:textColor="#D7DBDF"
+                                android:textSize="19dp"
+                                android:text="dkexpress.in@gmail.com"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="35dp"
+                android:layout_marginTop="40dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+                    <de.hdodenhof.circleimageview.CircleImageView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@color/fui_transparent"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/motercycledelivery"/>
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="DKExpress"
+                        android:layout_marginLeft="5dp"
+                        android:layout_gravity="center_vertical"
+                        android:textSize="50dp"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Copyright © 2021 Dkexpress All Rights Reserved"
+                    android:textColor="#D7DBDF"
+                    android:layout_marginBottom="10dp"/>
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+</LinearLayout>

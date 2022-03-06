@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_marginTop="5dp"
+    android:orientation="horizontal"
+    android:layout_height="match_parent">
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/user_image"
+        />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="5dp">
+        <TextView
+            android:id="@+id/user_name"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/primary_text_size"
+            android:textColor="@android:color/black"
+            android:text="Kamran Ahmed"/>
+        <LinearLayout
+            android:id="@+id/ll_of_star"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_star_rate_24"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_star_rate_24"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_star_rate_24"/>
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_baseline_star_rate_24"/>
+        </LinearLayout>
+        <TextView
+            android:id="@+id/review_firstline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:maxLines="1"
+            android:text="firstline"
+            android:textSize="@dimen/secondry_text_size"/>
+
+        <TextView
+            android:id="@+id/review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+            android:visibility="gone"
+        android:layout_marginTop="5dp"
+        android:maxLines="1"
+        android:text="firstline"
+        android:textSize="@dimen/secondry_text_size"/>
+    </LinearLayout>
+
+
+</LinearLayout>

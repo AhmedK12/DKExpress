@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.kamdan.dkexpress">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS" />
+
+    <application
+        android:name=".products.Helper"
+        android:allowBackup="true"
+        android:hardwareAccelerated="false"
+        android:icon="@drawable/dkmodified"
+        android:label="DKExpress"
+        android:largeHeap="true"
+        android:roundIcon="@drawable/dkmodified"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".cakes.Product"
+            android:exported="false" />
+        <activity
+            android:name=".cakes.Cart"
+            android:exported="false" />
+        <activity
+            android:name=".cakes.Cakes_main"
+            android:exported="false" />
+        <activity android:name=".grocery.OrderByImage" />
+        <activity android:name=".grocery.Record_Order" />
+        <activity android:name=".grocery.Product_Category" />
+        <activity android:name=".grocery.Profile" />
+        <activity android:name=".wallet.Wallet" />
+        <activity android:name=".grocery.OederPlaced" />
+        <activity android:name=".grocery.Cart" />
+        <activity android:name=".grocery.Product" />
+        <activity android:name=".grocery.Registration" />
+        <activity android:name=".grocery.groceryproduct" />
+        <activity android:name=".MainActivity2" />
+
+        <meta-data
+            android:name="com.google.geo.API_KEY"
+            android:value="AIzaSyCaOvFSzpsdqtwPb5XwHbvsdxtFAik8O0k" />
+
+        <activity android:name=".Cart" />
+        <activity android:name=".track" />
+        <activity android:name=".Get_Details" />
+        <activity android:name=".products.Product" />
+        <activity android:name=".Orders" />
+        <activity android:name=".Profile" />
+        <activity android:name=".registraition.Authentication" />
+        <activity android:name=".registraition.LoginCred" />
+        <activity android:name=".products.ProductActivity" />
+        <activity android:name=".MainActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name=".FirebaseMessageReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+    </application>
+
+</manifest>

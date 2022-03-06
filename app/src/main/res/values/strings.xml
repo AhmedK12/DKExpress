@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">""</string>
+    <string name="search">search</string>
+    <string name="more">more</string>
+    <string name="register">REGISTER</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_password_hint">Password</string>
+    <string name="signup_login_hint">Already have an account? Sign In</string>
+    <string name="login_signup_hint">Don\'t have an account? Sign Up</string>
+    <string name="change_add">Change Add</string>
+    <string name="minimum_password">Password Length must be greater than 6</string>
+    <string name="auth_failed">Invalid Credential</string>
+    <string name="Rupee_Sign">₹</string>
+    <string name="Box"> Box</string>
+    <string name="Layer"> Layer</string>
+    <string name="Rs">Rs.</string>
+    <string name="Total">Total: </string>
+    <string name="address">Address</string>
+    <string name="retailer">Retailer</string>
+    <string name="copyright">All Rights Reserved @ DKExpress LLc</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

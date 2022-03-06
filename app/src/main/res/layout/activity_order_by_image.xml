@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".grocery.OrderByImage">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/app_bar"
+        android:layout_height="40dp"
+        android:background="#17A91D"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:background="#17A91D"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/product_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="DKExpress"
+                app:titleTextColor="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <include
+        android:layout_below="@+id/app_bar"
+        android:id="@+id/neuuserdata"
+        layout="@layout/newuserdata"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@+id/neuuserdata"
+        android:id="@+id/wholeline">
+
+
+    <ImageView
+        android:layout_marginTop="70dp"
+        android:id="@+id/image_view"
+        android:layout_width="match_parent"
+        android:layout_height="340dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:src="@drawable/dkmodified"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_horizontal"
+        android:weightSum="1.0"
+        android:orientation="horizontal">
+        <ImageButton
+            android:layout_weight="0.5"
+            android:layout_gravity="center_horizontal"
+            android:id="@+id/button2"
+            android:layout_width="match_parent"
+            android:layout_marginBottom="52dp"
+            android:layout_height="47dp"
+            android:src="@drawable/ic_baseline_image_24"
+            />
+
+        <Button
+            android:layout_weight="0.5"
+            android:layout_width="match_parent"
+            android:layout_height="47dp"
+            android:text="Place Order"
+            android:textColor="#10A916"
+            android:textSize="18dp"
+            android:id="@+id/place_order"
+            android:layout_marginBottom="52dp"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:visibility="gone"
+        android:layout_below="@+id/app_bar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/order_line"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:id="@+id/relativelayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:id="@+id/relative1"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textColor="@android:color/black"
+                    android:text="Sub Total"/>
+                <TextView
+                    android:id="@+id/cartsubtotal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="25dp"
+                    android:textStyle="italic"
+                    android:textColor="@android:color/black"
+                    android:text="Calculate Sonner"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/relative1"
+                android:id="@+id/relative2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textColor="@android:color/black"
+                    android:text="Delivery Charge"/>
+                <TextView
+                    android:id="@+id/delivery"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="25dp"
+                    android:textColor="@android:color/black"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="italic"
+                    android:text="Calculate Sonner"/>
+            </RelativeLayout>
+            <RelativeLayout
+
+                android:layout_marginLeft="10dp"
+                android:layout_below="@+id/relative2"
+                android:id="@+id/relative3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="italic"
+                    android:textColor="#08700C"
+                    android:text="Free Delivery:"/>
+                <TextView
+                    android:id="@+id/free_delivery_minimum_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="#E64715"
+                    android:layout_alignParentRight="true"
+                    android:textStyle="italic"
+                    android:text="On orders over ₹100.0 shipped by DKExpress"/>
+            </RelativeLayout>
+            <LinearLayout
+                android:weightSum="1"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_marginLeft="10dp"
+                android:id="@+id/spinnerline"
+                android:layout_below="@id/relative3"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_weight=".5"
+                    android:textColor="#000"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Delivery Slot"/>
+                <Spinner
+                    android:layout_weight=".5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/slotpicker"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_below="@+id/spinnerline"
+                android:layout_width="match_parent"
+                android:layout_height="330dp"
+                android:src="@drawable/dkmodified"
+                android:id="@+id/order_image"/>
+
+            <ProgressBar
+                android:visibility="gone"
+                android:layout_marginTop="10dp"
+                android:id="@+id/progress_bar"
+                android:layout_below="@+id/order_image"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginTop="10dp"
+                android:id="@+id/Continueline"
+                android:weightSum="1"
+                android:clickable="true"
+                android:background="#35992A"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_weight="0.9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Continue"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:textSize="20dp"
+                    android:textAllCaps="false"
+                    android:textColor="#FFFFFF"
+                    android:background="@drawable/border1"
+                    android:backgroundTint="#35992A"
+                    android:id="@+id/Continue"/>
+                <TextView
+                    android:layout_weight="0.1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Calculate Sonner"
+                    android:textSize="20dp"
+                    android:id="@+id/total"
+                    android:textColor="@android:color/black"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/animation_id"
+        android:layout_height="match_parent"
+        app:lottie_rawRes="@raw/lottiedone"
+        android:layout_width="match_parent" />
+
+    <include layout="@layout/done"
+        android:visibility="gone"
+        android:id="@+id/done"/>
+    <include layout="@layout/doneerror"
+        android:visibility="gone"
+        android:id="@+id/doneerror"/>
+
+</RelativeLayout>

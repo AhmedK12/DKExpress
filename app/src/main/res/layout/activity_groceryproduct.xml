@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout
+    android:id="@+id/drawer"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".grocery.groceryproduct">
+
+
+    <LinearLayout
+        android:id="@+id/gridline"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.google.android.material.appbar.AppBarLayout
+            android:layout_width="match_parent"
+            android:id="@+id/app_bar1"
+            android:layout_height="40dp"
+            android:background="@color/colorPrimaryDark"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+
+                android:orientation="horizontal">
+                <ImageButton
+                    android:id="@+id/back_button"
+
+                    android:layout_gravity="center"
+                    android:layout_width="50dp"
+                    android:layout_height="30dp"
+                    android:backgroundTint="@color/colorPrimaryDark"
+                    android:src="@drawable/ic_baseline_arrow_back_24"/>
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/product_toolbar1"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    app:titleTextColor="@android:color/white"
+                    android:theme="@style/ToolbarColoredBackArrow">
+
+                </androidx.appcompat.widget.Toolbar>
+
+            </LinearLayout>
+
+
+        </com.google.android.material.appbar.AppBarLayout>
+        <GridView
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="vertical"
+            android:horizontalSpacing="6dp"
+            android:verticalSpacing="10dp"
+            android:id="@+id/products_grid"
+            android:numColumns="2"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/normalLine"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:background="#E3E8ED"
+            android:layout_height="match_parent">
+            <com.google.android.material.appbar.AppBarLayout
+                android:background="@color/colorPrimaryDark"
+                android:layout_width="match_parent"
+                android:id="@+id/app_bar"
+                android:layout_height="wrap_content"
+                >
+
+                <androidx.appcompat.widget.Toolbar
+                    android:id="@+id/product_toolbar"
+                    android:layout_width="match_parent"
+                    android:layout_height="?attr/actionBarSize"
+                    android:theme="@style/ToolbarColoredBackArrow"
+                    app:titleTextColor="@android:color/white"/>
+
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_marginTop="-50dp"
+                    android:layout_height="wrap_content">
+
+                    <androidx.appcompat.widget.SearchView
+                        android:id="@+id/product_search_view1"
+                        android:layout_width="match_parent"
+                        android:background="@drawable/border"
+                        android:layout_height="40dp"
+                        app:searchIcon="@drawable/ic_search_24dp"
+                        android:focusable="false"
+                        style="@style/MySearchView"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"/>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/suggestionlist"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/product_search_view1"
+                        android:layout_marginTop="10dp"
+                        android:background="#E4E4DD" />
+
+                </RelativeLayout>
+
+
+            </com.google.android.material.appbar.AppBarLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/category"
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/app_bar"
+                android:background="@drawable/gradientcolor1"
+                android:orientation="horizontal"
+                app:reverseLayout="true" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fillViewport="true"
+                android:background="#E3E8ED"
+                android:layout_below="@+id/category">
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <androidx.viewpager.widget.ViewPager
+                        android:layout_width="match_parent"
+                        android:layout_height="180dp"
+                        android:layout_marginBottom="10dp"
+                        android:id="@+id/offer"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+
+                        <androidx.cardview.widget.CardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            app:cardBackgroundColor="#FFFFFF"
+                            app:cardElevation="40dp">
+                            <LinearLayout
+                                android:padding="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:textColor="@color/blackTextColor"
+                                    android:text="Available Category" />
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:textAllCaps="false"
+                                    android:layout_marginRight="10dp"
+                                    android:id="@+id/seeaall"
+                                    android:clickable="true"
+                                    android:textColor="#0B44E1"
+                                    android:text="See All"/>
+                            </RelativeLayout>
+                        <com.kamdan.dkexpress.grocery.ScrollableGridView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="2"
+                            android:horizontalSpacing="5dp"
+                            android:verticalSpacing="5dp"
+                            android:id="@+id/category_grid"/>
+                            </LinearLayout>
+                        </androidx.cardview.widget.CardView>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Top Products"
+                            android:layout_marginLeft="10dp"
+                            android:layout_gravity="center_vertical"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="7dp"
+                            android:textColor="@color/blackTextColor"/>
+                        <com.kamdan.dkexpress.grocery.ScrollableGridView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:numColumns="1"
+                            android:horizontalSpacing="5dp"
+                            android:verticalSpacing="5dp"
+                            android:layout_marginBottom="60dp"
+                            android:id="@+id/product_gridview"
+                            />
+
+
+                    </LinearLayout>
+                </LinearLayout>
+            </ScrollView>
+
+
+
+
+                <com.google.android.material.bottomnavigation.BottomNavigationView
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    app:menu="@menu/bottom_menu"
+                    android:id="@+id/bottomnav"
+                    android:layout_alignParentBottom="true"
+                    android:layout_gravity="bottom"
+                    android:theme="@style/Theme.MyApp"
+                    app:labelVisibilityMode="labeled"
+
+                    android:background="@drawable/ic_bottom_nav_bckgrnd"
+                    />
+
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</androidx.drawerlayout.widget.DrawerLayout>

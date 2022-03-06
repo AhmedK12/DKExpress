@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".grocery.OederPlaced">
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:id="@+id/app_bar1"
+        android:layout_height="40dp"
+        >
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical"
+            android:background="#17A91D"
+            android:orientation="horizontal">
+            <ImageButton
+                android:id="@+id/back_button"
+                android:background="#17A91D"
+                android:layout_gravity="center"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
+                android:src="@drawable/ic_baseline_arrow_back_24"/>
+            <androidx.appcompat.widget.Toolbar
+                android:id="@+id/product_toolbar1"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:title="DKExpress"
+                app:titleTextColor="@android:color/white"
+                android:theme="@style/ToolbarColoredBackArrow">
+
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+
+
+    </com.google.android.material.appbar.AppBarLayout>
+    <include
+        android:id="@+id/neuuserdata"
+        layout="@layout/newuserdata"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="0.75" />
+    <LinearLayout
+        android:id="@+id/wholeline"
+        android:background="@android:color/white"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Address"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:layout_alignParentRight="true"
+                android:id="@+id/address2"
+                android:layout_marginRight="20dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="Gaziapur Bedwalia"/>
+
+        </RelativeLayout>
+        <TextView
+            android:textSize="17dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:text="Change"
+            android:textAllCaps="false"
+            android:background="@android:color/white"
+            android:textColor="#FFAB00"
+            android:id="@+id/addresschange"/>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:id="@+id/relative1"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="Total Amount"/>
+            <TextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="230.00"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_below="@+id/relative1"
+            android:id="@+id/relative2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="Delivery Charge"/>
+            <TextView
+                android:textSize="17dp"
+                android:id="@+id/delivery_charge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textColor="#197908"
+                android:layout_alignParentRight="true"
+                android:textStyle="italic"
+                android:text="Free"/>
+        </RelativeLayout>
+
+
+
+        <LinearLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/relative3"
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_weight="0.5"
+                android:textSize="17dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="Use_Wallet Money"/>
+            <Spinner
+                android:layout_weight="0.5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/wallet_money_picker"/>
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="10dp"
+            android:weightSum="1"
+            android:layout_marginLeft="10dp">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payable Amount:"
+                android:textSize="17dp"
+                android:textColor="@color/blackTextColor"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:text="1300.00"
+                android:textSize="17dp"
+                android:id="@+id/payable_amount"
+                android:textColor="@color/blackTextColor"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="Delivery Slot"/>
+            <TextView
+                android:textSize="17dp"
+                android:id="@+id/Deliverslot"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="20dp"
+                android:textColor="@android:color/black"
+                android:layout_alignParentRight="true"
+                android:textStyle="italic"
+                android:text="Mornning Slot 9AM to 11AM"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_marginTop="15dp"
+            android:background="@drawable/border"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Payment Method"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"/>
+
+            <TextView
+                android:id="@+id/payment_method"
+                android:layout_alignParentRight="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="Payment on Delivery"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:text="Date and Time"/>
+            <TextView
+                android:id="@+id/date_time"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="12-05-21"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="italic"
+                android:textSize="17dp"
+                android:textColor="@android:color/black"
+                android:text="Delivery Date"/>
+            <TextView
+                android:id="@+id/deliver_date"
+                android:textSize="17dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="20dp"
+                android:textStyle="italic"
+                android:textColor="@android:color/black"
+                android:text="12-05-21"/>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/place_order"
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:background="#FF6D01"
+            android:layout_height="30dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/place_order_text"
+                android:background="@drawable/rounded_corner"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="#0864C1"
+                android:textSize="20dp"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Place Order">
+            </TextView>
+        </LinearLayout>
+        <ProgressBar
+            android:id="@+id/progress_bar"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"/>
+
+    </LinearLayout>
+
+<com.airbnb.lottie.LottieAnimationView
+android:id="@+id/animation_id"
+android:layout_height="match_parent"
+app:lottie_rawRes="@raw/lottiedone"
+android:layout_width="match_parent" />
+
+<include layout="@layout/done"
+android:visibility="gone"
+android:id="@+id/done"/>
+<include layout="@layout/doneerror"
+    android:visibility="gone"
+    android:id="@+id/doneerror"/>
+
+</LinearLayout>

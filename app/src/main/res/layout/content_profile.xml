@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".Profile">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp">
+
+        <TextView
+            style="@style/headerText"
+            android:textSize="@dimen/headerTextSize"
+            android:text="Account Info"
+            android:textColor="@color/blackTextColor"
+            android:textStyle="normal" />
+        <TextView
+            style="@style/headerText"
+            android:textSize="12dp"
+            android:text="Change"
+            android:clickable="true"
+            android:id="@+id/change_address"
+            android:textColor="@color/colorPrimary"
+            android:textStyle="normal" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_weight="0.5"
+                style="@style/profileDetailsLayout">
+
+
+                <TextView
+                    android:id="@+id/nameTextView"
+                    android:text="First Name"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:layout_below="@+id/nameTextView"
+                    android:id="@+id/user_name_first"
+                    android:text="Alex"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="0.5"
+                style="@style/profileDetailsLayout">
+
+
+                <TextView
+                    android:id="@+id/nameTextView1"
+                    android:text="First Name"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:layout_below="@+id/nameTextView1"
+                    android:id="@+id/user_name_last"
+                    android:text="developer"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <View style="@style/proifleDetailsView" />
+        <RelativeLayout style="@style/profileDetailsLayout">
+
+
+            <TextView
+                android:id="@+id/user_mobile"
+                android:text="Mobile"
+                style="@style/profileDetailsTextMain"/>
+
+            <TextView
+                android:layout_below="@+id/user_mobile"
+                android:id="@+id/user_mobile_no"
+                android:text="+91 99999-99999"
+                style="@style/profileDetailsMiniText" />
+
+        </RelativeLayout>
+
+        <View style="@style/proifleDetailsView" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="1"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_weight="0.5"
+                style="@style/profileDetailsLayout">
+
+
+                <TextView
+                    android:id="@+id/village_mohalla"
+                    android:text="Village/Mohalla"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:layout_below="@+id/village_mohalla"
+                    android:id="@+id/village_mohalla_name"
+                    android:text="Srinagar"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_weight="0.5"
+                style="@style/profileDetailsLayout">
+
+
+                <TextView
+                    android:id="@+id/nearby"
+                    android:text="NearByPlace"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:layout_below="@+id/nearby"
+                    android:id="@+id/nearbyplace"
+                    android:text="Near Sbi Bank"
+                    style="@style/profileDetailsMiniText" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+        <View style="@style/proifleDetailsView" />
+        <LinearLayout
+            android:weightSum="1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <RelativeLayout
+                android:layout_weight="0.5"
+                style="@style/profileDetailsLayout">
+
+
+                <TextView
+                    android:id="@+id/pincode"
+                    style="@style/profileDetailsTextMain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Address" />
+
+                <TextView
+                    android:id="@+id/user_address"
+                    android:layout_below="@+id/pincode"
+                    android:text="Srinagar Siwan bihar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout style="@style/profileDetailsLayout">
+
+
+                <TextView
+                    android:text="Pincode"
+                    android:maxLines="1"
+                    android:id="@+id/address_text"
+                    style="@style/profileDetailsTextMain" />
+
+                <TextView
+                    android:id="@+id/user_pincode"
+                    android:layout_below="@+id/address_text"
+                    android:text="841226"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <View style="@style/proifleDetailsView" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

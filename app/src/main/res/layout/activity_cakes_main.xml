@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".cakes.Cakes_main">
+
+
+
+<RelativeLayout
+    android:id="@+id/search"
+    android:layout_width="match_parent"
+    android:layout_marginTop="40dp"
+    android:layout_height="wrap_content">
+
+    <androidx.appcompat.widget.SearchView
+        android:id="@+id/product_search_view"
+        style="@style/MySearchView"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@drawable/border"
+        android:focusable="false"
+        app:searchIcon="@drawable/places_ic_search" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:id="@+id/suggestion_list"
+        android:background="#E4E4DD"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/product_search_view" />
+
+</RelativeLayout>
+
+<ScrollView
+    android:layout_marginTop="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:layout_below="@+id/search">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <androidx.viewpager.widget.ViewPager
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/offer"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#FFFFFF"
+                app:cardElevation="40dp">
+                <LinearLayout
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:textColor="@color/blackTextColor"
+                            android:text="Category" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textAllCaps="false"
+                            android:layout_marginRight="10dp"
+                            android:id="@+id/seeaall"
+                            android:clickable="true"
+                            android:textColor="#0B44E1"
+                            android:text="See All"/>
+                    </RelativeLayout>
+                    <com.kamdan.dkexpress.grocery.ScrollableGridView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:numColumns="2"
+                        android:horizontalSpacing="5dp"
+                        android:verticalSpacing="5dp"
+                        android:id="@+id/category_grid"
+                        tools:ignore="MissingClass" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:numColumns="2"
+                android:horizontalSpacing="5dp"
+                android:verticalSpacing="5dp"
+                android:layout_marginBottom="60dp"
+                android:id="@+id/product_gridview"
+                />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+
+
+
+
+
+<com.google.android.material.bottomnavigation.BottomNavigationView
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    app:menu="@menu/bottom_menu"
+    android:id="@+id/bottom_nav"
+    android:layout_alignParentBottom="true"
+    android:layout_gravity="bottom"
+    android:theme="@style/Theme.MyApp"
+    app:labelVisibilityMode="labeled"
+    app:itemIconTint="#07CD0F"
+    app:itemTextColor="#0589C9"
+    android:background="@drawable/ic_bottom_nav_bckgrnd"
+    />
+
+</RelativeLayout>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/cat_row"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="80dp"
+    android:layout_height="80dp"
+    android:orientation="vertical"
+    android:padding="5dp"
+    android:clickable="true"
+    android:layout_marginTop="2dp">
+
+    <ImageView
+        android:id="@+id/category_image"
+        android:layout_width="80dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:scaleType="fitXY"
+        android:src="@drawable/fui_ic_googleg_color_24dp">
+
+    </ImageView>
+    <TextView
+        android:id="@+id/brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Glucorine kya haal hai bhai"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:textSize="12dp"
+        android:textColor="@android:color/black" />
+
+
+</LinearLayout>

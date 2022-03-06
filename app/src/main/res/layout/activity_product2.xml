@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".products.Product">
+    <LinearLayout
+        android:background="#FBF5F5"
+        android:paddingTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/details_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Glucorine Orange"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="@android:color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/details_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="₹212"
+            android:layout_marginLeft="20dp"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center_horizontal"
+            android:textColor="#278927"
+            android:textStyle="bold"/>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/detailsrecycler"
+            android:layout_gravity="center_horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:weightSum="2"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_marginLeft="10dp"
+            android:layout_height="wrap_content">
+
+
+
+
+            <TextView
+                android:layout_weight="1"
+                android:id="@+id/detail_description"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="7dp"
+                android:text="एक पेटी में 26 गिलास होते हैं \nजो ₹10 प्रति गिलास बेचा जाता है"
+                android:textColor="#1F2020"
+                android:textSize="15dp" />
+
+
+            <LinearLayout
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioGroup
+                    android:layout_gravity="end"
+                    android:id="@+id/radiogrp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="end"
+                    android:checkedButton="@id/box"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:layout_marginLeft="10dp"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Box"
+                        android:id="@+id/box"/>
+                    <RadioButton
+                        android:layout_marginLeft="10dp"
+                        android:text="Layer"
+                        android:textSize="15dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/line"/>
+
+                </RadioGroup>
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/des"
+            android:paddingLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="15dp"
+                android:textColor="#000"
+                android:gravity="center"
+                android:layout_gravity="center_vertical"
+                android:textStyle="bold"
+                android:text="Quantity:"/>
+            <ImageButton
+                android:id="@+id/product_decrementer"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="7dp"
+                android:backgroundTint="@android:color/holo_red_dark"
+                android:src="@drawable/ic_baseline_remove_24"
+                />
+
+            <EditText
+                android:id="@+id/product_quantity"
+                android:layout_width="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:focusable="false"
+                android:inputType="number"
+                android:layout_marginBottom="10dp"
+                android:layout_height="wrap_content"
+                android:text="1 Box">
+
+            </EditText>
+            <ImageButton
+                android:id="@+id/product_incrementer"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="@android:color/holo_green_dark"
+                android:src="@drawable/ic_baseline_add_24"/>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:layout_weight="1">
+                <Button
+                    android:id="@+id/product_place_order"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="10dp"
+                    android:background="#D209640E"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:text="Add to Cart"/>
+                <Button
+                    android:id="@+id/product_remove_order"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:textSize="15dp"
+                    android:layout_marginLeft="5dp"
+                    android:background="#CD2A26"
+                    android:textColor="@android:color/white"
+                    android:textAllCaps="false"
+                    android:visibility="gone"
+                    android:text="Remove"/>
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>
